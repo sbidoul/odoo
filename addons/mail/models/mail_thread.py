@@ -1928,7 +1928,7 @@ class MailThread(models.AbstractModel):
 
     @api.multi
     @api.returns('mail.message', lambda value: value.id)
-    def message_post(self, body='', subject=None,
+    def message_post(self, *, body='', subject=None,
                      message_type='notification', subtype=None,
                      parent_id=False, attachments=None,
                      notif_layout=False, add_sign=True, model_description=False,
